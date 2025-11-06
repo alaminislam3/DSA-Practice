@@ -4,15 +4,15 @@
 //   nextLevel: { courseId: "level2" },
 //   "programming Hero": { courseId: "level1" },
 // };
-// console.log(obj["programming Hero"])
+// console.log(obj)
 
 // 2
 
-// const obj ={}
+const obj ={}
 
-// obj.nextLevel = {courseId: "Level2"}
-// obj[true] = {courseId : "Level1"}
-// console.log(obj)
+obj.nextLevel = {courseId: "Level2"}
+obj[true] = {courseId : "Level1"}
+console.log(obj)
 
 // 3
 const course1 = {name : "programming hero"}
@@ -30,9 +30,9 @@ map.set(course2, {courseId: "level2"})
 
 // console.log([...map.keys()])
 // console.log([...map.values()])
-for (let key of map.keys()){
-    console.log(key)
-}
+// for (let key of map.keys()){
+//     console.log(key)
+// }
 
 
 

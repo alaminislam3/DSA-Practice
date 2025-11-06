@@ -8,9 +8,12 @@
 
 // console.log(`This code took ${endTime- startTime} ms`);
 
-// const arr = ["apple", "banana", "cherry", "date", "elderberry"];
+const arr = ["apple", "banana", "cherry", "date", "elderberry"];
 
 // const set = new Set(arr)
+
+const set = new Set(arr)
+const test = Array.from(set)
 
 // const test = Array.from(set)
 
@@ -21,6 +24,8 @@
 const numbers = [1,2,4,7,12,9]
 
 // numbers.forEach(n=> console.log(n*2))
+
+// 2 4 8 14 24 18
 
 /* foreach isn't returning anything  */
 

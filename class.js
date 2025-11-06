@@ -17,7 +17,7 @@ class Book {          /* Here we are creating a reusable Book class */
     }
 }
 const book1 = new Book ("JS", "200", "js-101")
-console.log(book1, "price $:" , book1.page)
+console.log(book1)
 
 // Book.sellCopy()
 // Book.sellCopy()

@@ -1,36 +1,53 @@
 /* From simple Total to powerful Agregation Reduce  Mod - 2.5 */
 
-// count subtotal 
+// count subtotal
 
 const cartItem = [
-  {id:1, name : 'laptop', price: 500, quantity : 1},   
-  {id:2, name : 'mobile', price: 1500, quantity : 2},
-  {id:3, name : 'keyboard', price: 600, quantity : 2}
-]
+  { id: 1, name: "laptop", price: 500, quantity: 1 },
+  { id: 2, name: "mobile", price: 1500, quantity: 2 },
+  { id: 3, name: "keyboard", price: 600, quantity: 2 },
+];
 
 const subTotal = cartItem.reduce((subtotal,product)=> {
-    // console.log(subtotal,product)
-    return subtotal + product.price  * product.quantity
+  return subtotal + product.price * product.quantity
 },0)
 
-// console.log(subTotal)
 
-// FIND BEST SCORER 
+
+
+// const subTotal = cartItem.reduce((subtotal, product) => {
+//   console.log(subtotal,product)
+//   return subtotal + product.price * product.quantity;
+// }, 0);
+
+console.log(subTotal)
+
+// FIND BEST SCORER
 
 const players = [
-    {name : 'tamim', score: 200},
-    {name : 'sakib', score: 500},
-    {name : 'musfiq', score: 700},
-    {name : 'topy', score: 200},
-    {name : 'arif', score: 200}
-]
+  { name: "tamim", score: 200 },
+  { name: "sakib", score: 500 },
+  { name: "musfiq", score: 700 },
+  { name: "topy", score: 200 },
+  { name: "arif", score: 200 },
+];
 
-const bestScorer = players.reduce((bestPlayer, player)=> {
-    if(bestPlayer.score > player.score){
-        return bestPlayer
+const bestScorer = players.reduce((bestscorer,player)=> {
+  if(bestscorer.score > player.score){
+    return bestscorer
     }
     return player
-}, players[0])
+},players[0])
+
+
+console.log(bestScorer)
+
+// const bestScorer = players.reduce((bestPlayer, player) => {
+//   if (bestPlayer.score > player.score) {
+//     return bestPlayer;
+//   }
+//   return player;
+// }, players[0]);
 
 // console.log(bestScorer)
 
@@ -131,12 +148,34 @@ const rawApiData = [
     rating: 4.5,
     stock: 60,
   },
-]
-const result = rawApiData.filter((item) => item.category === 'Electronics').sort((a,b)=> b.rating - a.rating).slice(0,3).map((item)=> {
-  return{
-    name : item.productName
-  } 
+];
+// 1.find Electronics item using filter
+// 2.use sort for finding best rating product
+// 3. use slice for reduce size
+// 4. use map to show product name
+
+const result = rawApiData.filter((item)=> item.category === 'Electronics').sort((a,b)=> b.rating - a.rating).slice(0,3).map((item)=> {
+ return {name : item.productName}
 })
+
+
+
+
+
+// const result = rawApiData.filter((item) => item.category === 'Electronics').sort((a,b)=> b.rating - a.rating).slice(0,3).map((item)=> {
+//   return{
+//     name : item.productName
+//   } 
+// })
 /* Here we are filtering Electronics product with #filter method. Then we use #sort method for find best rating product. Then we use slice method to reduce size and try to take best quality product. And lastly we use map to show item name one by one in array  */
 
 console.log(result)
+
+const numbers = [40,100,1,5,9,90]
+const fruits =[ 'mango', 'banana', 'apple']
+
+const result3 = fruits.sort((a,b)=> a.localeCompare(b));
+
+// const result2 = numbers.sort((a,b)=>  a-b)
+
+// console.log(result3)
